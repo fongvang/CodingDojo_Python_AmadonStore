@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    {%load static%}
+    <link rel="stylesheet" href="{static 'checkout.css'}">
+</head>
+<body>
+    <div id="container">
+        <h1>Thank you for your busines!</h1>
+        <p>We charged your credit card for ${{request.session.charged}}</p>
+        <p>You have ordered {{request.session.items}} items so far and spent a total of {{request.session.total}} with Amadon.com!</p>
+    <a href="/home">Go To Homepage!</a>
+    </div>
+    
+</body>
+</html>

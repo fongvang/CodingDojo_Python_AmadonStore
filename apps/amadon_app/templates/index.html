@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AmadonWebsite</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+
+<div id="container">
+    <h1>Amadon Online Store!</h1>
+    <table>
+        <thead>
+            <td class="width200">Item</td>
+            <td class="width100">Price</td>
+            <td class="width100">Quantity</td>
+            <td class="width100">Actions!</td>
+        </thead>
+    <!-- dojo t shirt and price -->
+        <tr>
+            <form action="/process" method="POST">
+                {%csrf_token%}
+                <td>Dojo T-Shirt</td>
+                <td><label for="price">$19.99</label></td>
+                <input type="hidden" name="price" value="19.99">
+                <td>
+                    <select name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td> <button class="buy">Buy!</button> </td>
+            </form>
+        </tr>
+    <!-- sweater item and price -->
+        <tr>
+            <form action="/process" method="POST">
+                {%csrf_token%}
+                <td>Dojo Sweater</td>
+                <td><label for="price">$29.99</label></td>
+                <input type="hidden" name="price" value="29.99">
+                <td>
+                    <select name="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td> <button class="buy">Buy!</button> </td>
+            </form>
+        </tr>
+    <!-- Dojo Cup and price -->
+        <tr>
+            <form action="/process" method="POST">
+                {%csrf_token%}
+                <td>Dojo Cup</td>
+                <td><label for="price">$4.99</label></td>
+                <input type="hidden" name="price" value="4.99">
+                <td>
+                    <select name="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td> <button class="buy">Buy!</button> </td>
+            </form>
+        </tr>
+    <!-- Dojo Algorithm Book -->
+        <tr>
+            <form action="/process" method="POST">
+                {%csrf_token%}
+                <td>Algorithm Book</td>
+                <td><label for="price">$49.99</label></td>
+                <input type="hidden" name="price" value="49.99">
+                <td>
+                    <select name="quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td> <button class="buy">Buy!</button> </td>
+            </form>
+        </tr>
+            
+    </table>
+</div>
+
+</body>
+</html>
